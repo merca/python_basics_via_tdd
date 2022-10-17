@@ -78,7 +78,7 @@ def test_method_with_float_som_return_type():
 def test_method_with_bool_som_return_type():
     return_value = test_method_with_bool_som_return_type()
     assert type(return_value) == bool
-    assert return_value == False
+    assert return_value is False
 
 
 def test_method_with_string_list():
