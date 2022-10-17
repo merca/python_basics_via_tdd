@@ -7,7 +7,7 @@
 
 # parameters in methodes
 def test_method_with_parameter_and_return():
-    """hva denne gjør"""
+    """this method has a parameter and it will return this paramter value"""
     pass  # hva denne gjør
 
 
