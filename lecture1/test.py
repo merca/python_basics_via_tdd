@@ -6,7 +6,7 @@
 ###########
 
 # parameters in methodes
-def test_method_with_parameter_and_return():
+def method_with_parameter_and_return():
     """this method has a parameter and it will return this paramter value"""
     pass  # hva denne gjør
 
@@ -52,7 +52,7 @@ def test_method_with_parameter():
 
 def test_method_with_parameter_and_return():
     assert (
-        test_method_with_parameter_and_return("method_with_parameter")
+        method_with_parameter_and_return("method_with_parameter")
         == "method_with_parameter"
     )
 
