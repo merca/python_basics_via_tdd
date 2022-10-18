@@ -68,7 +68,7 @@ def method_with_string_list() -> list:  # I tried a few different solutions to t
 
 def method_with_number_list() -> list:  # Similar solution to the previous problem.
     """I also first tried to specify the type to return list(int[]) but this also failed."""
-    return list([1, 2, 3])
+    return [1, 2, 3]
     pass
 
 
