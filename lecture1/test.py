@@ -62,7 +62,7 @@ def method_with_bool_som_return_type() -> bool:  # solved by calling the bool cl
 # Lists
 def method_with_string_list() -> list:  # I tried a few different solutions to the list problem, however, calling the class seemed to be best solution.
     """returned list([string1, string2]) as expected, however, I tried also passing list(str([])) to see that it returned the correct data, but that failed"""
-    return list(["string1", "string2"])
+    return ["string1", "string2"]
     pass
 
 
