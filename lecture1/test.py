@@ -6,14 +6,20 @@
 ###########
 
 # parameters in methodes
+
+
+from this import d
+
+
 def method_with_parameter_and_return(
     x,
-) -> str:  # Put x as a parameter in method, pass x as string
-    """
-    x when passed as a parameter defauls to any value and a literal with value 1, we assign x to a string value and return the string the test is expecting.
-    """
-    x = str("method_with_parameter")
+):  # Put x as a parameter in method, pass x as string
     return x
+    """
+    I passed x as a parameter, the test expected 4 strings as output?
+    """
+    return
+
     """this method has a parameter and it will return this paramter value"""
     pass  # what does this do?
 
@@ -86,8 +92,14 @@ def test_method_with_parameter_and_return():
         method_with_parameter_and_return("method_with_parameter")
         == "method_with_parameter"
     )
-    assert method_with_parameter_and_return("anpther_string_as_input") == "anpther_string_as_input"
-    assert method_with_parameter_and_return("yet_another_string_as_input") == "yet_another_string_as_input"
+    assert (
+        method_with_parameter_and_return("another_string_as_input")
+        == "another_string_as_input"
+    )
+    assert (
+        method_with_parameter_and_return("yet_another_string_as_input")
+        == "yet_another_string_as_input"
+    )
     assert method_with_parameter_and_return("one_more") == "one_more"
 
 
