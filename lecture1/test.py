@@ -8,7 +8,7 @@
 # parameters in methodes
 
 
-from this import d
+# removed uneccecary import
 
 
 def method_with_parameter_and_return(
