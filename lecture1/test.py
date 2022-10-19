@@ -86,6 +86,9 @@ def test_method_with_parameter_and_return():
         method_with_parameter_and_return("method_with_parameter")
         == "method_with_parameter"
     )
+    assert method_with_parameter_and_return("anpther_string_as_input") == "anpther_string_as_input"
+    assert method_with_parameter_and_return("yet_another_string_as_input") == "yet_another_string_as_input"
+    assert method_with_parameter_and_return("one_more") == "one_more"
 
 
 def test_method_with_int_som_return_type():
