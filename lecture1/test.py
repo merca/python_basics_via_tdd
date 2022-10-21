@@ -11,71 +11,83 @@
 # removed uneccecary import
 
 
-def method_with_parameter_and_return(
-    x,
-):  # Put x as a parameter in method, pass x as string
-    return x
-    """
-    I passed x as a parameter, the test expected 4 strings as output?
-    """
-    return
+import re
 
-    """this method has a parameter and it will return this paramter value"""
-    pass  # what does this do?
+
+def method_with_parameter_and_return(x):
+    """Returns x
+
+    Args:
+        x (str): Input string
+
+    Returns:
+        str: Returns the input string
+    """
+    return x
 
 
 def method_with_parameter(
     n,
-) -> int:  # Similar solution to method_with_parameter_and_return, however, to test if any parameter value is valid, I passed parameter n, as set datatype as int
+) -> int:
+    """Just a method with a parameter
+
+    Args:
+        n (Any): Any parameter and its not used
+
+    Returns:
+        int: just returns 1
     """
-    I assigned n as a int, when I put n = 0, it was still the datatype literal, I can imagine running into problems in future tests if I do not assign the proper data-
-    values that the tests are expecting. n = int(0) and return n + 1 should give the output 1
-    """
-    n = int(0)
-    return n + 1
-    pass
+    return int(0 + 1)
 
 
 # basic types
-def method_with_int_som_return_type() -> int:  # I struggled a bit with this one, and made the test more complicated for myself, until I eventually stumbled upon the seemingly logical solution that was passing -> int to the function rather than as a parameter
-    """
-    Testing the solution mentioned in the comment above, I returned the value 1, and the test passed as expected.
+def method_with_int_som_return_type() -> int:
+    """Method to retun int type
+
+    Returns:
+        int: returns type int
     """
     return 1
-    pass
 
 
-def method_with_string_som_return_type() -> str:  # as I realised with the method w/ data type int, the solution would be the same with types str and float.
-    """
-    same solution applied as with method w/ type int.
-    """
+def method_with_string_som_return_type() -> str:
+    """Method to retun str type"""
     return str("string")
-    pass
 
 
 def method_with_float_som_return_type() -> float:  #
-    """here I wanted to see if my thought process was correct, so I returned a value of float(1), the method did not return 1.0 and therefore the test failed as it was not specified"""
+    """
+    here I wanted to see if my thought process was correct, so I returned a value of float(1),
+    the method did not return 1.0 and therefore the test failed as it was not specified
+    """
     return float(1.0)
-    pass
 
 
 def method_with_bool_som_return_type() -> bool:  # solved by calling the bool class and then assigning the bool value to False to return expected output.
     """Test failed when assigned boolean value True, this was expected."""
     return bool(False)
-    pass
 
 
 # Lists
-def method_with_string_list() -> list:  # I tried a few different solutions to the list problem, however, calling the class seemed to be best solution.
+def method_with_string_list() -> list[
+    str
+]:  # I tried a few different solutions to the list problem, however, calling the class seemed to be best solution.
     """returned list([string1, string2]) as expected, however, I tried also passing list(str([])) to see that it returned the correct data, but that failed"""
     return ["string1", "string2"]
-    pass
 
 
-def method_with_number_list() -> list:  # Similar solution to the previous problem.
+def method_with_string_list_and_parm(stringlist: list) -> list[str]:
+    return stringlist
+
+
+def method_with_number_list() -> list[int]:  # Similar solution to the previous problem.
     """I also first tried to specify the type to return list(int[]) but this also failed."""
     return [1, 2, 3]
-    pass
+
+
+###############################################
+# My tests since lack variation
+###############################################
 
 
 ###############################################
@@ -131,6 +143,14 @@ def test_method_with_string_list():
     return_value = method_with_string_list()
     assert type(return_value) == list
     assert return_value == ["string1", "string2"]
+
+
+def test_method_with_list_paramter():
+    return_value = method_with_string_list_and_parm(["string1", "string2"])
+    assert type(return_value) == list
+    assert return_value == ["string1", "string2"]
+    return_value = method_with_string_list_and_parm([])
+    assert type(return_value) == list
 
 
 def test_method_with_number_list():
