@@ -1,4 +1,12 @@
+from pytest import raises
 from .code import *
+
+
+def test_concatinate_strings(string1, string2):
+    assert concatinate_strings("Hello", "World") == "HelloWorld"
+    assert concatinate_strings("Hello", "") == "Hello"
+    assert concatinate_strings("", "World") == "World"
+    assert concatinate_strings("", "") == ""
 
 
 def test_prefix_string():
@@ -34,18 +42,19 @@ def test_ends_with():
 def test_get_first_character():
     assert get_first_character("Hello") == "H"
     assert get_first_character("World") == "W"
-    assert get_first_character("") == ""
+    with raises(IndexError):
+        get_first_character("")
 
 
 def test_get_last_character():
     assert get_last_character("Hello") == "o"
     assert get_last_character("World") == "d"
-    assert get_last_character("") == ""
+    with raises(IndexError):
+        get_last_character("")
 
 
 def test_get_first_n_characters():
     assert get_first_n_characters("Hello", 2) == "He"
-    assert get_first_n_characters("Hello", 0) == ""
     assert get_first_n_characters("Hello", 5) == "Hello"
     assert get_first_n_characters("Hello", 6) == "Hello"
     assert get_first_n_characters("", 2) == ""
@@ -53,7 +62,6 @@ def test_get_first_n_characters():
 
 def test_get_last_n_characters():
     assert get_last_n_characters("Hello", 2) == "lo"
-    assert get_last_n_characters("Hello", 0) == ""
     assert get_last_n_characters("Hello", 5) == "Hello"
     assert get_last_n_characters("Hello", 6) == "Hello"
     assert get_last_n_characters("", 2) == ""
@@ -65,7 +73,7 @@ def test_get_substring():
     assert get_substring("Hello", 0, 6) == "Hello"
     assert get_substring("Hello", 2, 5) == "llo"
     assert get_substring("Hello", 2, 6) == "llo"
-    assert get_substring("Hello", 5, 6) == "o"
+    assert get_substring("Hello", 5, 6) == ""
     assert get_substring("Hello", 6, 6) == ""
     assert get_substring("Hello", 0, 0) == ""
     assert get_substring("Hello", 1, 0) == ""
