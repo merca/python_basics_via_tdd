@@ -1,93 +1,53 @@
-"""
-    methodes basics
-"""
-###########
-# methodes
-###########
-
-# parameters in methodes
+"""methodes basics"""
+############################
+# Your code goes below
+############################
 
 
-# removed uneccecary import
-
-
-import re
+def method_with_parameter(x):
+    """Method with any parameter"""
+    raise NotImplementedError
 
 
 def method_with_parameter_and_return(x):
-    """Returns x
-
-    Args:
-        x (str): Input string
-
-    Returns:
-        str: Returns the input string
-    """
-    return x
+    """Method with any parameter and return"""
+    raise NotImplementedError
 
 
-def method_with_parameter(
-    n,
-) -> int:
-    """Just a method with a parameter
-
-    Args:
-        n (Any): Any parameter and its not used
-
-    Returns:
-        int: just returns 1
-    """
-    return int(0 + 1)
-
-
-# basic types
 def method_with_int_som_return_type() -> int:
-    """Method to retun int type
-
-    Returns:
-        int: returns type int
-    """
-    return 1
+    """Method to return int type"""
+    raise NotImplementedError
 
 
 def method_with_string_som_return_type() -> str:
     """Method to retun str type"""
-    return str("string")
+    raise NotImplementedError
 
 
-def method_with_float_som_return_type() -> float:  #
-    """
-    here I wanted to see if my thought process was correct, so I returned a value of float(1),
-    the method did not return 1.0 and therefore the test failed as it was not specified
-    """
-    return float(1.0)
+def method_with_float_som_return_type() -> float:
+    """Method to return float type"""
+    raise NotImplementedError
 
 
-def method_with_bool_som_return_type() -> bool:  # solved by calling the bool class and then assigning the bool value to False to return expected output.
-    """Test failed when assigned boolean value True, this was expected."""
-    return bool(False)
+def method_with_bool_som_return_type() -> bool:
+    """Method to return bool type"""
+    raise NotImplementedError
 
 
 # Lists
-def method_with_string_list() -> list[
-    str
-]:  # I tried a few different solutions to the list problem, however, calling the class seemed to be best solution.
-    """returned list([string1, string2]) as expected, however, I tried also passing list(str([])) to see that it returned the correct data, but that failed"""
-    return ["string1", "string2"]
+def method_with_string_list() -> list[str]:
+    """Method to return list of strings"""
+    raise NotImplementedError
 
 
-def method_with_string_list_and_parm(stringlist: list) -> list[str]:
-    return stringlist
+def method_with_string_list_and_parm(x) -> list[str]:
+    """Method with input list to return list of strings"""
+    raise NotImplementedError
 
 
-def method_with_number_list() -> list[int]:  # Similar solution to the previous problem.
-    """I also first tried to specify the type to return list(int[]) but this also failed."""
-    return [1, 2, 3]
-
-
-###############################################
-# My tests since lack variation
-###############################################
+def method_with_number_list() -> list[int]:
+    """Method to return list of numbers"""
+    raise NotImplementedError
 
 
 ###############################################
@@ -97,6 +57,9 @@ def method_with_number_list() -> list[int]:  # Similar solution to the previous 
 
 def test_method_with_parameter():
     assert method_with_parameter("method_with_parameter")
+    assert method_with_parameter(1)
+    assert method_with_parameter(1.0)
+    assert method_with_parameter(True)
 
 
 def test_method_with_parameter_and_return():
@@ -105,14 +68,14 @@ def test_method_with_parameter_and_return():
         == "method_with_parameter"
     )
     assert (
-        method_with_parameter_and_return("another_string_as_input")
-        == "another_string_as_input"
+        method_with_parameter_and_return(1)
+        == 1
     )
     assert (
-        method_with_parameter_and_return("yet_another_string_as_input")
-        == "yet_another_string_as_input"
+        method_with_parameter_and_return(1.0)
+        == 1.0
     )
-    assert method_with_parameter_and_return("one_more") == "one_more"
+    assert method_with_parameter_and_return(True) is True
 
 
 def test_method_with_int_som_return_type():
