@@ -2,7 +2,7 @@ from pytest import raises
 from .code import *
 
 
-def test_concatinate_strings(string1, string2):
+def test_concatinate_strings():
     assert concatinate_strings("Hello", "World") == "HelloWorld"
     assert concatinate_strings("Hello", "") == "Hello"
     assert concatinate_strings("", "World") == "World"
@@ -27,7 +27,7 @@ def test_starts_with():
     assert starts_with("Hello", "He") == True
     assert starts_with("Hello", "Hi") == False
     assert starts_with("Hello", "Hello") == True
-    assert starts_with("Hello", "Hello World") == False
+    assert starts_with("Hello", "World") == False
     assert starts_with("Hello", "") == True
 
 
@@ -37,6 +37,22 @@ def test_ends_with():
     assert ends_with("Hello", "Hello") == True
     assert ends_with("Hello", "Hello World") == False
     assert ends_with("Hello", "") == True
+
+
+def test_create_sentence():
+    assert create_sentence(["Hello", "World"]) == "Hello World"
+    assert (
+        create_sentence(["Hello", "World", "How", "Are", "You"])
+        == "Hello World How Are You"
+    )
+    assert (
+        create_sentence(["Hello", "World", "How", "Are", "You"], "_")
+        == "Hello_World_How_Are_You"
+    )
+    assert (
+        create_sentence(["Hello", "World", "How", "Are", "You"], "**")
+        == "Hello**World**How**Are**You"
+    )
 
 
 def test_get_first_character():
