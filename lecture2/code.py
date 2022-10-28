@@ -1,49 +1,25 @@
-#######################################################
-"""Personal Tests Below This rectanle! """
-#######################################################
 """
-def concatinate_strings(string1, string2):
-    string1 = "Hello"
-    string2 = "World"
-    string_concat = ""
-    if string_concat != "HelloWorld":
-        return string1 + string2
-    else:
-        return string1, string2 and string_concat            
-
-2nd attempt at using the not in check in Python
-
-def concatinate_strings(string1, string2):
-    string1 = "Hello"
-    string2 = "World"
-    string_concat = ""
-    if "HelloWorld" not in string_concat:
-        string_concat = string1 + string2
-        return string_concat
-    if "Hello" not in string2:
-        return string1
-    if "World" not in string1:
-        return string2          
-    else:
-        return ""
+    26.10.2022 - added docstrings to code comments for easier readability.
 
 """
-#######################################################
-# Regular test cases below this rectangle.
-#######################################################
 def concatinate_strings(string1, string2):
     string_concat = string1 + string2
-    #"%s%s".format(string1, string2)
-    #f"{string1}{string2}"
-    # #string1 + string2
+    """
+        Optional string formatting choices
+        #"%s%s".format(string1, string2)
+        #f"{string1}{string2}"
+        # #string1 + string2
+        # read up on string.join() & f.string & string formatting.
+    """
     return string_concat
-# read up on string.join() & f.string & string formatting.
 
 
 def prefix_string(string, prefix):
-    # example of string prefix 
-    # new_string = r"Hello, World" - outputs raw string literal.
-    # new_string_as_byte = b"Hello, World" - outputs bytes string literal.
+    """
+        # example of string prefix 
+        # new_string = r"Hello, World" - outputs raw string literal.
+        # new_string_as_byte = b"Hello, World" - outputs bytes string literal.
+    """
     return prefix + string
 
 
@@ -86,13 +62,13 @@ def ends_with(string, suffix):
 
 def get_first_character(string):
     """
-        return the index of a given string: "Hello World" expected output: str[0] = H
+        return the index of a given string, expected output: str[index(n)] = n: -> any point of n index in an array, starting at 0
     """
     return string[0]
 
 def get_last_character(string):
     """
-        if we return string[0] we get the first index of a string, however, if we return -1 we recieve the whole index of the string minus one.
+        if we return string[0] we get the first index of a string, however, if we return -1 we recieve the last char in the array[n(x)] x >= lenght(n) n < +-max_lenght_of_array, index begins at 0
     """
     return string[-1]
 
@@ -107,7 +83,9 @@ def get_last_n_characters(string, n):
 
 def get_substring(string, start, end):
     """
-        similar solutions to test at line:100 and test at line:104, we use string slicing to get a start of a substring at: string[substring_start, substring_end]
+        similar solutions to test at line:100 and test at line:104 
+        we use string slicing to get a start of a substring at: 
+        string[substring_start, substring_end]
     """
     return string[start:end]
 
@@ -118,7 +96,27 @@ def welcome(name: str | None, location: str | None) -> str:
         name = "Unknown"    
     return f"Welcome {name} to {location}"
     
+
+def create_sentence(array: str | None, sep: str = " ") -> str:
+    return sep.join(array)
+    """
+    to do this in a for loop:
+    1 - loop through elements until 2nd to last element.
+    2 - add the lest element with a seperator.
+    Example for loop:
+    sentence = ""
+    for a in array:
+        sentence = a + sep
+    return sentence
+
+
+    """
     
+    
+    
+#############################
+# failed test solutions below 
+#############################
     
 """    
     if location != None:
@@ -130,4 +128,41 @@ def welcome(name: str | None, location: str | None) -> str:
 
     - bad example, does not work!
 
-"""        
+
+def concatinate_strings(string1, string2):
+    string1 = "Hello"
+    string2 = "World"
+    string_concat = ""
+    if string_concat != "HelloWorld":
+        return string1 + string2
+    else:
+        return string1, string2 and string_concat            
+
+2nd attempt at using the not in check in Python
+
+def concatinate_strings(string1, string2):
+    string1 = "Hello"
+    string2 = "World"
+    string_concat = ""
+    if "HelloWorld" not in string_concat:
+        string_concat = string1 + string2
+        return string_concat
+    if "Hello" not in string2:
+        return string1
+    if "World" not in string1:
+        return string2          
+    else:
+        return ""
+
+
+- test case for "test_create_sentence":
+
+    def create_sentence(string):
+    x = " ".join(string)
+    if "_" not in string:
+        x = " _".join(string)
+    if " **" not in string:
+        x = " **".join(string)
+    return x
+
+"""
