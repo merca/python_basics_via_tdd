@@ -90,7 +90,7 @@ def get_substring(string, start, end):
     return string[start:end]
 
 def welcome(name: str | None, location: str | None) -> str:
-    if location == None:
+    if location is None:
         location = "the world"
     if name == None:
         name = "Unknown"    
