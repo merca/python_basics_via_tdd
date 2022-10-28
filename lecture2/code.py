@@ -99,7 +99,11 @@ def welcome(name: str | None, location: str | None) -> str:
 
 def create_sentence(array: str | None, sep: str = " ") -> str:
     return sep.join(array)
-    """
+    """sentence = ""
+    for a in array:
+        sentence = sentence + a 
+    return sentence
+    
     to do this in a for loop:
     1 - loop through elements until 2nd to last element.
     2 - add the lest element with a seperator.
