@@ -25,39 +25,44 @@ def prefix_string(string, prefix):
 
 def suffix_string(string, suffix):
     """
-        example if string ends with a specified suffix: "Hello World"; 
-        World = suffix, then return True
-        else: return False
+    example if string ends with a specified suffix: "Hello World";
+    World = suffix, then return True
+    else: return False
     """
     return string + suffix
 
 
 def starts_with(string, prefix):
     """
-        test prefix: Hello World -> Starts with He -> return True
-        if test prefix Hello World !-> He -> return False
-        if Hello = Hello -> return True
-        if Hello World = Hello -> return False
+    test prefix: Hello World -> Starts with He -> return True
+    if test prefix Hello World !-> He -> return False
+    if Hello = Hello -> return True
+    if Hello World = Hello -> return False
 
     """
     if string.startswith(prefix):
         return True
     else:
-        return False    
+        return False
 
 
 def ends_with(string, suffix):
     """
-        using str.endswith() to test if string "Hello World" ends with "World:
-            if "Hello World".endswith("World"):
-                return True
-            else:
-                return False    
+    using str.endswith() to test if string "Hello World" ends with "World:
+        if "Hello World".endswith("World"):
+            return True
+        else:
+            return False
     """
     if string.endswith(suffix):
         return True
     else:
-        return False    
+        return False
+
+
+def create_sentence(words: list[str], separator) -> str:
+    # concatinate strings in a list int a sentence.
+    pass
 
 
 def get_first_character(string):
@@ -65,6 +70,7 @@ def get_first_character(string):
         return the index of a given string, expected output: str[index(n)] = n: -> any point of n index in an array, starting at 0
     """
     return string[0]
+
 
 def get_last_character(string):
     """
@@ -74,7 +80,7 @@ def get_last_character(string):
 
 
 def get_first_n_characters(string, n):
-    return string[0:n] # returns n index of string
+    return string[0:n]  # returns n index of string
 
 
 def get_last_n_characters(string, n):
@@ -88,6 +94,7 @@ def get_substring(string, start, end):
         string[substring_start, substring_end]
     """
     return string[start:end]
+
 
 def welcome(name: str | None, location: str | None) -> str:
     if location is None:
