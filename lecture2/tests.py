@@ -1,8 +1,12 @@
 from pytest import raises
-from .code import *
+
+from .code import (concatinate_strings, create_sentence, ends_with,
+                   get_first_character, get_first_n_characters,
+                   get_last_character, get_last_n_characters, get_substring,
+                   prefix_string, starts_with, suffix_string, welcome)
 
 
-def test_concatinate_strings():
+def test_concatinate_strings():  # type: ignore
     assert concatinate_strings("Hello", "World") == "HelloWorld"
     assert concatinate_strings("Hello", "") == "Hello"
     assert concatinate_strings("", "World") == "World"

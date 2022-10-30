@@ -2,6 +2,9 @@
     26.10.2022 - added docstrings to code comments for easier readability.
 
 """
+from __future__ import annotations
+
+
 def concatinate_strings(string1, string2):
     string_concat = string1 + string2
     """
@@ -60,11 +63,6 @@ def ends_with(string, suffix):
         return False
 
 
-def create_sentence(words: list[str], separator) -> str:
-    # concatinate strings in a list int a sentence.
-    pass
-
-
 def get_first_character(string):
     """
         return the index of a given string, expected output: str[index(n)] = n: -> any point of n index in an array, starting at 0
@@ -100,35 +98,36 @@ def welcome(name: str | None, location: str | None) -> str:
     if location is None:
         location = "the world"
     if name is None:
-        name = "Unknown"    
+        name = "Unknown"
     return f"Welcome {name} to {location}"
-    
 
-def create_sentence(array: str | None, sep: str = " ") -> str:
-    return sep.join(array)
-    """sentence = ""
-    for a in array:
-        sentence = sentence + a 
-    return sentence
-    
-    to do this in a for loop:
-    1 - loop through elements until 2nd to last element.
-    2 - add the lest element with a seperator.
-    Example for loop:
+
+def create_sentence(array: list[str], sep: str = " ") -> str:
     sentence = ""
-    for a in array:
-        sentence = a + sep
-    return sentence
+
+    for i in array[0:-1]:
+        sentence += i + sep
+
+    return sentence + array[-1]
+
+    # sentence =
+    # for a in array:
+    #     sentence = sentence + a
+    # return sentence
+
+    # to do this in a for loop:
+    # 1 - loop through elements until 2nd to last element.
+    # 2 - add the lest element with a seperator.
+    # Example for loop:
+    # sentence = ""
+    # for a in array:
+    #     sentence = a + sep
+    # return sentence
 
 
-    """
-    
-    
-    
 #############################
-# failed test solutions below 
+# failed test solutions below
 #############################
-    
 """    
     if location != None:
         return "Welcome {name} to {location}".format(name=name, location=location)
