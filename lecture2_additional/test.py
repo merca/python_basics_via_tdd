@@ -33,11 +33,11 @@ def test_summarize_elements_in_array_start_and_end_index():
     assert summarize_elements_in_array_start_and_end_index(
         [1, 2, 3, 4, 5], 0, 5) == 15
     assert summarize_elements_in_array_start_and_end_index(
-        [1, 2, 3, 4, 5], 2, 4) == 9
+        [1, 2, 3, 4, 5], 2, 4) == 12
     assert summarize_elements_in_array_start_and_end_index(
-        [1, 2, 3, 4, 5], 2, 5) == 9
+        [1, 2, 3, 4, 5], 2, 5) == 12
     assert summarize_elements_in_array_start_and_end_index(
-        [1, 2, 3, 4, 5], 4, 5) == 5
+        [1, 2, 3, 4, 5, 6], 4, 5) == 11
 
 
 def test_summarize_elements_in_array_start_and_end_index_with_negative_numbers():
@@ -48,23 +48,11 @@ def test_summarize_elements_in_array_start_and_end_index_with_negative_numbers()
     assert summarize_elements_in_array_start_and_end_index(
         [-1, -2, -3, -4, -5], 0, 5) == -15
     assert summarize_elements_in_array_start_and_end_index(
-        [-1, -2, -3, -4, -5], 2, 4) == -9
+        [-1, -2, -3, -4, -5], 2, 4) == -12
     assert summarize_elements_in_array_start_and_end_index(
-        [-1, -2, -3, -4, -5], 2, 5) == -9
+        [-1, -2, -3, -4, -5], 2, 5) == -12
     assert summarize_elements_in_array_start_and_end_index(
-        [-1, -2, -3, -4, -5], 4, 5) == -5
-
-
-def test_summarize_elements_in_array_start_and_end_index_with_invalid_index():
-    with pytest.raises(IndexError):
-        summarize_elements_in_array_start_and_end_index(
-            [1, 2, 3, 4, 5], 0, 6)
-    with pytest.raises(IndexError):
-        summarize_elements_in_array_start_and_end_index(
-            [1, 2, 3, 4, 5], 6, 7)
-    with pytest.raises(IndexError):
-        summarize_elements_in_array_start_and_end_index(
-            [1, 2, 3, 4, 5], 6, 5)
+        [-1, -2, -3, -4, -5, -6], 4, 5) == -11
 
 
 def test_add_one_to_every_element_in_array():
@@ -96,14 +84,14 @@ def test_check_if_element_in_array_can_be_divided_by_number():
 
 def test_find_elements_that_contains_letter():
     assert find_elements_that_contains_letter(
-        ["Merca", "Agne", "Jørgen"], "e") == ["Merca", "Agne", "Jørgen"]
+        ["Merca", "Jane", "John"], "e") == ["Merca", "Jane"]
     assert find_elements_that_contains_letter(
-        ["Merca", "Agne", "Jørgen"], "a") == ["Merca", "Agne"]
+        ["Merca", "Jane", "John"], "a") == ["Merca", "Jane"]
     assert find_elements_that_contains_letter(
-        ["Merca", "Agne", "Jørgen"], "ø") == ["Jørgen"]
+        ["Merca", "Jane", "John"], "n") == ["Jane", "John"]
 
 
 def test_reverce_string():
     assert reverce_string("Merca") == "acreM"
-    assert reverce_string("Agne") == "engA"
-    assert reverce_string("Jørgen") == "negrøJ"
+    assert reverce_string("Jane") == "enaJ"
+    assert reverce_string("John") == "nhoJ"
