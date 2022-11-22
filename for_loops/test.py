@@ -165,6 +165,11 @@ def test_reverce_string():
     assert reverce_string("John") == "nhoJ"
 
 
+####################
+# New challanges
+####################
+
+
 def test_split_array_into_two_parts():
     assert split_array_into_two_parts([1, 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]
     assert split_array_into_two_parts([1, 2, 3, 4, 5, 6]) == [[1, 2, 3], [4, 5, 6]]
