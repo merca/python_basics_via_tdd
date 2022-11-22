@@ -141,8 +141,8 @@ def check_if_element_in_array_can_be_divided_by_number(array, number) -> list[bo
     Use for loop
     """
     new_array = []
-    for elements in array:  # array = [1,2,3]
-        if elements % number == 0:  # a = 1, number = 2
+    for elements in array:
+        if elements % number == 0:
             new_array.append(True)
         else:
             new_array.append(False)
@@ -176,8 +176,8 @@ def find_elements_that_contains_letter(array, condition) -> list:
     Use for loop
     """
     new_array = []
-    for elements in array:  # array = ["Merca", "Jane", "John"]
-        if elements.lower().find(condition) != -1:  # a = "Merca", condtion = "e"
+    for elements in array:
+        if elements.lower().find(condition) != -1:
             new_array.append(elements)
     return new_array
 
@@ -209,20 +209,6 @@ def reverce_string(input_string):
     Use for loop
     """
     reverse_string = ""
-    for letter in input_string:  # input_string = "Merca", letter = "M"
-        reverse_string = letter + reverse_string  #
+    for letter in input_string:
+        reverse_string = letter + reverse_string
     return reverse_string
-    """
-        first iteration:
-            "" = M + ""
-        second iteration:
-            M = e + M
-        third iteration:
-            eM = r + eM
-        fourth iteration:
-            reM = c + reM
-        fifth iteration:
-            crem = a + creM
-        return statement:
-            acreM         
-    """
