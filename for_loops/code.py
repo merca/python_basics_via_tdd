@@ -1,4 +1,5 @@
 from __future__ import annotations
+import math
 
 
 def summarize_all_elements_in_array(array):
@@ -212,3 +213,121 @@ def reverce_string(input_string):
     for letter in input_string:
         reverse_string = letter + reverse_string
     return reverse_string
+
+
+####################
+# New challanges
+####################
+
+
+def split_array_into_two_parts(array):
+    """
+    Split array into two parts. First part should be first half of array. Second part should be second half of array.
+    If array length is odd, first part should be bigger:
+    [1,2,3,4,5] = [[1,2,3], [4,5]]
+    Use for loop
+    """
+    pass
+
+
+def split_array_into_multiple_parts(array, number_of_parts):
+    """
+    Split array into multiple parts, number of arrays should be equal to number_of_parts
+    If array length is not divisible by number_of_parts, last array should contain rest of elements:
+    [1,2,3,4,5], 2 = [[1,2], [3,4], [5]]
+    Use for loop and array index to get elements: array[start_index:end_index]
+    Use divmod to get number of elements in each part
+    """
+    pass
+
+
+def return_only_odd_numbers(array):
+    """
+    Return only odd numbers from array
+    Use for loop
+    """
+    pass
+
+
+def check_if_string_contains_only_digits(input_string) -> bool:
+    """
+    Check if string contains only digits
+    Use for loop
+    """
+    pass
+
+
+def check_if_string_contains_only_letters(input_string) -> bool:
+    """
+    Check if string contains only letters
+    Use for loop
+    """
+    pass
+
+
+def fizz_buzz(number):
+    """
+    Given an integer n, return a string array answer (1-indexed) where:
+    answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
+    answer[i] == "Fizz" if i is divisible by 3.
+    answer[i] == "Buzz" if i is divisible by 5.
+    answer[i] == i (as string) if none of the above conditions are true.
+    Use for loop with range
+    Example:
+    n = 15
+    Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
+    """
+    pass
+
+
+def running_sum_in_array(array):
+    """
+    Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+    Return the running sum of nums.
+    Use for loop with range
+    Example:
+    Input: nums = [1,2,3,4]
+    Output: [1,3,6,10]
+    """
+    pass
+
+
+def find_missing_number_in_array(array):
+    """
+    Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+    Use for loop with range
+    Return None if there is no missing number
+    Example:
+    Input: nums = [3,0,1]
+    Output: 2
+    """
+    pass
+
+
+def find_duplicate_number_in_array(array):
+    """
+    Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+    There is only one repeated number in nums, return this repeated number.
+    Use for loop with range
+    Return None if there is no duplicate number
+    Example:
+    Input: nums = [1,3,4,2,2]
+    Output: 2
+    """
+    pass
+
+
+def maximum_wealth(accounts):
+    """
+    You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+    A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+    Use for loop with range and use sum function to get sum of array
+    Example:
+    Input: accounts = [[1,2,3],[3,2,1]]
+    Output: 6
+    Explanation:
+    1st customer has wealth = 1 + 2 + 3 = 6
+    2nd customer has wealth = 3 + 2 + 1 = 6
+    Both customers are considered the richest with a wealth of 6 each, so return 6.
+    """
+    pass
