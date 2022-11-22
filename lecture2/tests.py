@@ -1,9 +1,19 @@
 from pytest import raises
 
-from .code import (concatinate_strings, create_sentence, ends_with,
-                   get_first_character, get_first_n_characters,
-                   get_last_character, get_last_n_characters, get_substring,
-                   prefix_string, starts_with, suffix_string, welcome)
+from .code import (
+    concatinate_strings,
+    create_sentence,
+    ends_with,
+    get_first_character,
+    get_first_n_characters,
+    get_last_character,
+    get_last_n_characters,
+    get_substring,
+    prefix_string,
+    starts_with,
+    suffix_string,
+    welcome,
+)
 
 
 def test_concatinate_strings():  # type: ignore
@@ -28,19 +38,19 @@ def test_suffix_string():
 
 
 def test_starts_with():
-    assert starts_with("Hello", "He") == True
-    assert starts_with("Hello", "Hi") == False
-    assert starts_with("Hello", "Hello") == True
-    assert starts_with("Hello", "World") == False
-    assert starts_with("Hello", "") == True
+    assert starts_with("Hello", "He") is True
+    assert starts_with("Hello", "Hi") is False
+    assert starts_with("Hello", "Hello") is True
+    assert starts_with("Hello", "World") is False
+    assert starts_with("Hello", "") is True
 
 
 def test_ends_with():
-    assert ends_with("Hello", "lo") == True
-    assert ends_with("Hello", "World") == False
-    assert ends_with("Hello", "Hello") == True
-    assert ends_with("Hello", "Hello World") == False
-    assert ends_with("Hello", "") == True
+    assert ends_with("Hello", "lo") is True
+    assert ends_with("Hello", "World") is False
+    assert ends_with("Hello", "Hello") is True
+    assert ends_with("Hello", "Hello World") is False
+    assert ends_with("Hello", "") is True
 
 
 def test_create_sentence():
