@@ -260,13 +260,13 @@ def test_find_missing_number_in_array():
     assert find_missing_number_in_array([0, 1, 2, 3, 4, 6, 7, 8, 9]) == 5
     assert find_missing_number_in_array([0, 1, 2, 3, 4, 5, 6, 7, 9]) == 8
     assert find_missing_number_in_array([0, 2, 3, 4, 5, 6, 7, 8]) == 1
-    assert find_missing_number_in_array([0, 1, 2, 3, 4, 5, 6, 7, 8]) == None
+    assert find_missing_number_in_array([0, 1, 2, 3, 4, 5, 6, 7, 8]) is None
 
 
 def test_find_duplicate_number_in_array():
     assert find_duplicate_number_in_array([1, 2, 2, 4, 5, 6, 7, 8, 9]) == 2
     assert find_duplicate_number_in_array([1, 2, 3, 4, 5, 6, 7, 8, 9, 9]) == 9
-    assert find_duplicate_number_in_array([1, 2, 3, 4, 5, 6, 7, 8, 9]) == None
+    assert find_duplicate_number_in_array([1, 2, 3, 4, 5, 6, 7, 8, 9]) is None
 
 
 def test_maximum_wealth():
